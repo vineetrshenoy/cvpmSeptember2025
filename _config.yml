@@ -1,5 +1,5 @@
 title: CVPM 2025
 description: Computer Vision for Physiological Monitoring at ICCV 2025
-show_downloads: true
+show_downloads: False
 google_analytics:
 theme: jekyll-theme-cayman
