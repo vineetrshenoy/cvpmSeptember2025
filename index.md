@@ -26,7 +26,7 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 | 8:15 AM- 8:45 AM, Ball Room A           | Academic Multimodal AI in the Age of Big Tech Giants | Tim K. Marks  |
 | 8:15 AM- 8:45 AM, Ball Room A           | Academic Multimodal AI in the Age of Big Tech Giants | Tim K. Marks  |
 
-### There's a horizontal rule below this.
+### CVPM 2025 Organizers
 
 * * *
 

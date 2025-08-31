@@ -20,8 +20,84 @@
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
     </header>
 
+    <style>
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            /* Adjust overall text size here */
+            font-size: 0.8em;
+            gap: 0.5em;
+            margin-bottom: 1em;
+        }
+
+        .col {
+            flex: 1 1 100px;
+            text-align: center;
+            margin: 0.5em;
+        }
+
+        /* Make images smaller and keep them circular */
+        .col img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Slightly reduce heading size for names */
+        .col h4 {
+            font-size: 1em;
+            margin: 0.5em 0 0.2em 0;
+        }
+
+        .col a small {
+            font-size: 0.9em;
+        }
+
+        /* For multiline headings, you can adjust line-height or spacing if needed */
+        .multiline-heading {
+            line-height: 1.1em;
+        }
+    </style>
+
     <main id="content" class="main-content" role="main">
       {{ content }}
+
+      <div class="row">
+        <div class="col">
+            <img src="cvpm_images/mcduff.jpeg" alt="Daniel McDuff">
+            <h4><a href="https://scholar.google.com/citations?user=m7Jr-b4AAAAJ&hl=en">Daniel McDuff</a></h4>
+            <h4>Google</h4>
+        </div>
+        <div class="col">
+            <img src="cvpm_images/tmarks.jpg" alt="Tim Marks">
+            <h4><a href="https://www.merl.com/people/tmarks">Tim Marks</a></h4>
+            <h4>MERL</h4>
+        </div>
+        <div class="col">
+            <img src="cvpm_images/wang.jpg" alt="Wenjin Wang">
+            <h4><a href="https://www.tue.nl/en/research/researchers/wenjin-wang">Wenjin Wang</a></h4>
+            <h4>Eindhoven Institute of Technology</h4>
+        </div>
+        <div class="col">
+            <img src="cvpm_images/mansour.jpg" alt="Hassan Mansour">
+            <h4><a href="https://www.merl.com/people/mansour">Hassan Mansour</a></h4>
+            <h4>MERL</h4>
+        </div>
+        <div class="col">
+            <img src="cvpm_images/sander.jpg" alt="Sander Stuijk">
+            <h4><a href="https://www.tue.nl/en/research/researchers/sander-stuijk">Sander Stuijk</a></h4>
+            <h4>Eindhoven Institute of Technology</h4>
+        </div>
+        <div class="col">
+            <img src="cvpm_images/VineetS.jpg" alt="Vineet Shenoy">
+            <h4><a href="https://vineetrshenoy.github.io/">Vineet Shenoy</a></h4>
+            <h4>Johns Hopkins University</h4>
+        </div>
+        
+    </div>
+
+
 
       <footer class="site-footer">
         {% if site.github.is_project_page %}
