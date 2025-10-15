@@ -16,7 +16,7 @@
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
-      <img src="{{ '/cvpm_images/iccv-navbar-logo-smallest.png' | relative_url }}" alt="Workshop Logo" class="project-logo">
+      <img src="{{ '/cvpm_images/ICCV-2025-Logo-Color.png' | relative_url }}" alt="Workshop Logo" class="corner-logo">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
     </header>
@@ -127,6 +127,14 @@
 </section>
   
     <style>
+        .corner-logo {
+            position: fixed; /* Takes the element out of the normal flow and positions it relative to the viewport */
+            top: 0;          /* Aligns the top edge with the top edge of the viewport */
+            left: 0;         /* Aligns the left edge with the left edge of the viewport */
+            z-index: 1000;   /* (Optional) Ensures the logo appears on top of other content */
+            margin: 10px;    /* (Optional) Adds a small space from the actual edge of the screen */
+            width: 220px;
+        }
         .company-logo {
             /* Inherited from .col img, must be reset */
             border-radius: 0 !important; /* Forces it to be rectangular/original shape */
