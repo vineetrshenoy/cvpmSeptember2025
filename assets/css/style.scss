@@ -2,3 +2,18 @@
 ---
 
 @import 'jekyll-theme-cayman';
+
+.custom-header-content .project-name {
+    /* Ensure the main title is large */
+    font-size: 2.25rem; /* Cayman default is 2.25rem */
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 0.2em; /* Spacing between the title and the date/details */
+}
+
+.custom-header-content .project-tagline {
+    /* Adjust the size/weight of the subtitle lines */
+    font-size: 1.75rem; /* Cayman default is 1.5rem */
+    font-weight: 600;
+    line-height: 1.4;
+}

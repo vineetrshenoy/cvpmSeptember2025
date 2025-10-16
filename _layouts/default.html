@@ -14,12 +14,24 @@
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
-
+     <img src="{{ '/cvpm_images/ICCV-2025-Logo-Color.png' | relative_url }}" alt="Workshop Logo" class="corner-logo">
     <header class="page-header" role="banner">
-      <img src="{{ '/cvpm_images/ICCV-2025-Logo-Color.png' | relative_url }}" alt="Workshop Logo" class="corner-logo">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+    <div class="custom-header-content">
+        {% if page.header_html %}
+            {{ page.header_html }}
+        {% else %}
+            <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+            <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+        {% endif %}
+    </div>
     </header>
+
+    <div class="logo-row-container">
+    <img src="cvpm_images/google_logo.png" alt="MERL Logo" class="sponsor-logo">
+    <img src="cvpm_images/tu_logo.png" alt="MERL Logo" class="sponsor-logo">
+    <img src="cvpm_images/merl_logo_tim.png" alt="MERL Logo" class="sponsor-logo">
+    <img src="cvpm_images/jhu_logo.png" alt="MERL Logo" class="sponsor-logo">
+    </div>
 
     <section class="main-content">
       <h2>
@@ -127,6 +139,22 @@
 </section>
   
     <style>
+        .sponsor-logo {
+            /* Set a small, consistent size for all logos in this row */
+            height: 80px; /* Adjust height to your preferred size */
+            width: auto;  /* Maintain aspect ratio */
+            border-radius: 0; /* Ensure no inherited circular styling is applied */
+        }
+        .logo-row-container {
+            /* Use Flexbox to align logos horizontally */
+            display: flex;
+            justify-content: center; /* Center the entire row of logos */
+            align-items: center;
+            gap: 20px; /* Space between each logo */
+            padding: 15px 0; /* Add vertical padding above/below the logo row */
+            background-color: #f7f7f7; /* Optional: adds a slight background to separate it */
+            border-bottom: 1px solid #ddd; /* Optional: adds a separator line */
+        }
         .corner-logo {
             position: fixed; /* Takes the element out of the normal flow and positions it relative to the viewport */
             top: 0;          /* Aligns the top edge with the top edge of the viewport */
