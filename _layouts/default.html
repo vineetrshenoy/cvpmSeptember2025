@@ -82,52 +82,52 @@
         </thead>
         <tbody>
             <tr>
-                <td>8:30 AM - 8:45 AM</td>
+                <td>8:30AM - 8:45AM</td>
                 <td></td>
                 <td>Welcome and Introductory Remarks</td>
             </tr>
             <tr>
-                <td>8:40 AM - 9:20 AM</td>
+                <td>8:40AM - 9:20AM</td>
                 <td>Jim Rehg (UIUC)</td>
                 <td><b> Keynote 1: </b> Jim Rehg Keynote Talk  <i>(35 minute talk with 5 minutes Q&A)</i></td>
             </tr>
             <tr>
-                <td>9:20 AM - 9:40 AM</td>
+                <td>9:20AM - 9:40AM</td>
                 <td> </td>
                 <td><i> Accepted Paper 1: </i> BeatFormer: Efficient motion-robust remote heart rate estimation through unsupervised spectral zoomed attention filters</td>
             </tr>
             <tr>
-                <td>9:40 AM - 10:00 AM</td>
+                <td>9:40AM - 10:00AM</td>
                 <td> </td>
                 <td><i> Accepted Paper 2: </i> Remote Heart Rate Measurement Based on Near Infrared Prior Information</td>
             </tr>
             <tr>
-                <td>10:00 AM - 10:20 AM</td>
+                <td>10:00AM - 10:20AM</td>
                 <td>  </td>
                 <td><b> Coffee Break: </b> <i> Exhibit Hall 2</i></td>
             </tr>
             <tr>
-                <td>10:20 AM - 11:00 AM</td>
+                <td>10:20AM - 11:00AM</td>
                 <td> Marni Bartlett (Apple) </td>
                 <td><b> Keynote 2: </b> <i>The Digital Mental Health Study:  Behavioral and physiological sensing on mobile devices</i></td>
             </tr>
             <tr>
-                <td>11:00 AM - 11:20 AM</td>
+                <td>11:00AM - 11:20AM</td>
                 <td> </td>
                 <td><i> Accepted Paper 3: </i> A High-Throughput Platform to Bench Test Smartphone-Based Heart RateMeasurements Derived From Video</td>
             </tr>
             <tr>
-                <td>11:20 AM - 11:40 AM</td>
+                <td>11:20AM - 11:40AM</td>
                 <td> </td>
                 <td><i> Accepted Paper 4: </i> VitalVideos-Worldwide: A large and diverse rPPG dataset with rich ground truths</td>
             </tr>
             <tr>
-                <td>11:40 AM -12:20 PM</td>
+                <td>11:40AM -12:20PM</td>
                 <td>Tim Marks (MERL)</td>
                 <td><b> Keynote 3: </b> <i>Modular Methods for Imaging Photoplethysmography </i>(35 minute talk with 5 minutes Q&A)</td>
             </tr>
             <tr>
-                <td>12:20 PM - 12:30 PM</td>
+                <td>12:20PM - 12:30PM</td>
                 <td></td>
                 <td><b> Best Paper Award and Closing Remarks </b> </td>
             </tr>
@@ -136,6 +136,77 @@
 </section>
   
     <style>
+        .main-content {
+            /* Increase max-width to allow content to spread out */
+            max-width: 1200px; /* Example: set to a fixed wide width */
+            /* OR use a percentage for responsive design */
+            /* max-width: 90%; */
+        }
+        
+        .main-content table {
+            /* Ensure the table uses all available width */
+            width: 100%;
+            /* This property prevents content in cells from forcing column widths */
+            /* It makes columns take up space based on the width you assign below */
+            table-layout: fixed; 
+        }
+        
+        /* Prioritize the 'Talk Title' column for more space (3rd column) */
+        .main-content table th:nth-child(3),
+        .main-content table td:nth-child(3) {
+            width: 60%; /* Give 60% of the total table width to this column */
+        }
+
+        /* Adjust other column widths if necessary (e.g., Time is 1st, Speaker is 2nd) */
+        .main-content table th:nth-child(1),
+        .main-content table td:nth-child(1) {
+            width: 15%; /* Time column */
+        }
+
+        .main-content table th:nth-child(2),
+        .main-content table td:nth-child(2) {
+            width: 25%; /* Speaker column */
+        }
+        .main-content table {
+            width: 100%;
+            /* KEY: This property forces columns to respect the width values set below */
+            table-layout: fixed;
+        }
+
+        /* 1. Widen the "Time" column (1st column) */
+        .main-content table th:nth-child(1),
+        .main-content table td:nth-child(1) {
+            /* Increase from the previous suggestion (15%) to, for example, 20% */
+            width: 20%; 
+        }
+
+        /* 2. Narrow the "Speaker" column (2nd column) */
+        .main-content table th:nth-child(2),
+        .main-content table td:nth-child(2) {
+            /* Decrease from the previous suggestion (25%) to, for example, 15% */
+            width: 15%; 
+        }
+
+        /* 3. Adjust the "Talk Title" column (3rd column) to use the remaining space */
+        .main-content table th:nth-child(3),
+        .main-content table td:nth-child(3) {
+            /* The remaining width: 100% - 20% - 15% = 65% */
+            width: 65%; 
+        }
+        .main-content table td,
+        .main-content table th {
+            text-align: left; /* Default alignment for the whole table (often inherited) */
+            vertical-align: top; /* Standard practice for schedule/content tables */
+        }
+
+        /* Override: Center only the content in the Speaker column (2nd column) */
+        .main-content table th:nth-child(2),
+        .main-content table td:nth-child(2) {
+            /* Apply center alignment to the second column */
+            text-align: center;
+        }
+        /* The 15% + 25% + 60% = 100% total */
+        /* --- END NEW STYLES --- */
         .sponsor-logo {
             /* Set a small, consistent size for all logos in this row */
             height: 80px; /* Adjust height to your preferred size */
@@ -153,7 +224,7 @@
             border-bottom: 1px solid #ddd; /* Optional: adds a separator line */
         }
         .corner-logo {
-            position: fixed; /* Takes the element out of the normal flow and positions it relative to the viewport */
+            position: fixed !important; /* Takes the element out of the normal flow and positions it relative to the viewport */
             top: 0;          /* Aligns the top edge with the top edge of the viewport */
             left: 0;         /* Aligns the left edge with the left edge of the viewport */
             z-index: 1000;   /* (Optional) Ensures the logo appears on top of other content */
